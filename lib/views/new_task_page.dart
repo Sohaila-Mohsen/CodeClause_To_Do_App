@@ -1,15 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:code_cluse_to_do_app/model/task.dart';
-import 'package:code_cluse_to_do_app/views/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
-
 import '../bloc/task_cubit/cubit/task_cubit.dart';
 import '../core/components/app_navigation_bar.dart';
 import '../core/components/button.dart';
 import '../core/components/form_field.dart';
-import '../core/style/app_text_style/app_text_style.dart';
 
 class NewTaskPage extends StatelessWidget {
   NewTaskPage({Key? key, required this.taskCubit}) : super(key: key);

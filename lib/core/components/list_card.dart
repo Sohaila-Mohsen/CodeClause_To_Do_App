@@ -40,7 +40,7 @@ class ListCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
-                  "${task!.date!.toDate().day} ${task!.date!.toDate().month}, ${task!.date!.toDate().year}",
+                  "${task!.date!.toDate().day}-${task!.date!.toDate().month}-${task!.date!.toDate().year}",
                   style: AppTextStyle.greenTextStyle(),
                 ),
               ],

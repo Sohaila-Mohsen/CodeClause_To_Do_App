@@ -73,18 +73,6 @@ class SingleTaskPage extends StatelessWidget {
                         }
                       },
                     ),
-                    CustomFormField(
-                      enabled: false,
-                      readOnly: true,
-                      label: "Date",
-                      controller: _title,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Email is required';
-                        }
-                        return null;
-                      },
-                    ),
                     SizedBox(
                       height: constraintsHight / 30,
                     ),
@@ -92,6 +80,7 @@ class SingleTaskPage extends StatelessWidget {
                         onPress: () async {
                           await taskCubit.updateTask(Task(
                               title: _title!.text,
+                              isDone: taskCubit.tasks![index!].isDone,
                               description: _description!.text,
                               date: taskCubit.tasks![index!].date,
                               taskId: taskCubit.tasks![index!].taskId));
